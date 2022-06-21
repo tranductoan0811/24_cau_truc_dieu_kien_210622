@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+
+<body>
+  
+
+
+<!-- Viết chương trình kiểm tra đăng nhập hệ thống của người dùng theo yêu cầu sau
+
+Yêu cầu người dùng nhập tên từ bàn phím. 
+
+Nếu tên nhập vào là Admin thì yêu cầu nhập mật khẩu.
+Nếu mật khẩu là TheMaster thì in ra chuỗi Welcome.
+Nếu mật khẩu nhập vào là null in ra chuỗi Canceled.
+Còn lại in ra chuỗi Wrong password. 
+Nếu tên nhập vào là null in ra chuỗi canceld.
+Còn lại in ra chuỗi “I don’t know you” -->
+
+<!-- thông tin đầu vào: username, pass; -->
+<form action="">
+  <fieldset style="width: 300px;">
+    <legend>Login form</legend>
+<label for="">Tên đăng nhập:</label>
+<input type="username" id="username" placeholder="Tên đăng nhập:"><br><br>
+
+<label for="">password: </label>
+<input type="username" id="password" placeholder="password: "><br><br>
+
+<button type="button" onclick="login();" style="color: blue;">Đăng nhập</button>
+<p></p>
+</fieldset>
+</form>
+<script>
+  function login() {
+    let username, pass;
+    username = document.getElementById("username").value;
+    pass = document.getElementById("password").value;
+    // Kiểm tra giá trị usernam
+    if (username == "Admin") {
+
+        if (pass == null) {
+
+          alert("Xin vui lòng nhập mật khẩu");
+
+        }
+        
+        else if (pass == "TheMaster") {
+          
+          alert("Welcome!");
+
+        } else if (pass == "null") {
+
+          alert("Canceled");
+
+        } else if (pass != "TheMaster" || pass != "null" || pass != null) {
+
+          alert("Wrong password");
+
+        }
+
+
+    } else if (username == "null") {
+
+      alert("canceled");
+
+   } else {
+
+      alert("I dont' Know you.");
+
+    }
+
+}
+
+</script>
+</body>
+</html>
